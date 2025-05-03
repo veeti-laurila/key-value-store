@@ -10,6 +10,7 @@ class keyValueStore:
     def set(self, key: str, value: str, uuid) -> None:
         if key not in self.store:
             self.store[key] = []
+        # https://www.uuidgenerator.net/dev-corner/python
         self.store[key].append([value, str(uuid)])
 
     def get(self, key: str, timestamp: int) -> str:
